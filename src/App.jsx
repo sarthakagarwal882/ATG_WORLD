@@ -1,14 +1,16 @@
-
-// eslint-disable-next-line no-unused-vars
-import { useState } from 'react'
-
 import './App.css'
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import HomeRoute from './routes/HomeRoute';
 
 function App() {
-
+  console.log('hello');
   return (
     <>
-    <p>Lets go!</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomeRoute />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

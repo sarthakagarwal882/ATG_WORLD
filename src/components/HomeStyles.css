@@ -1,0 +1,73 @@
+.home {
+    width: 100%;
+}
+
+.home .group-intro {
+    background-image: url(../assets/g-intro.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5999649859943977) 30%, rgba(0, 0, 0, 0.39548319327731096) 100%), url(../assets/g-intro.svg) no-repeat;
+    display: flex;
+    width: 100%;
+    aspect-ratio: 3.27272727;
+    background-size: cover;
+    position: relative;
+}
+
+.group-intro .info {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    position: absolute;
+    top: 68%;
+    left: 15%;
+}
+
+
+.group-intro div:first-child {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    flex-direction: row;
+    color: #ffffff;
+    margin: 3% auto 0;
+}
+
+.group-intro div:first-child span {
+    border: 1px solid #fff;
+    display: inline-block;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.group-intro div:first-child svg{
+    font-size: 1.3rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .home .group-intro {
+        background-image: url(../assets/g-intro-mobile.svg);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5999649859943977) 30%, rgba(0, 0, 0, 0.39548319327731096) 100%), url(../assets/g-intro-mobile.svg) no-repeat;
+        display: flex;
+        width: 100%;
+        aspect-ratio: 1.52542;
+        background-size: cover;
+        position: relative;
+    }
+    
+.group-intro .info {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    position: absolute;
+    top: 75%;
+    left: 7%;
+}    
+    .group-intro .info p {
+        font-size: 0.8rem;
+        margin: 3px 0 0 0;
+    }
+}
