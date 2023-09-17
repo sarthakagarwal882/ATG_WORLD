@@ -3,8 +3,8 @@
 }
 
 .home .group-intro {
-    background-image: url(../assets/g-intro.svg);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5999649859943977) 30%, rgba(0, 0, 0, 0.39548319327731096) 100%), url(../assets/g-intro.svg) no-repeat;
+    background-image: url(/assets/g-intro.svg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5999649859943977) 30%, rgba(0, 0, 0, 0.39548319327731096) 100%), url(/assets/g-intro.svg) no-repeat;
     display: flex;
     width: 100%;
     aspect-ratio: 3.27272727;
@@ -48,8 +48,8 @@
 
 @media only screen and (max-width: 1000px) {
     .home .group-intro {
-        background-image: url(../assets/g-intro-mobile.svg);
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5999649859943977) 30%, rgba(0, 0, 0, 0.39548319327731096) 100%), url(../assets/g-intro-mobile.svg) no-repeat;
+        background-image: url(/assets/g-intro-mobile.svg);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5999649859943977) 30%, rgba(0, 0, 0, 0.39548319327731096) 100%), url(/assets/g-intro-mobile.svg) no-repeat;
         display: flex;
         width: 100%;
         aspect-ratio: 1.52542;

@@ -16,7 +16,7 @@
 }
 
 .nav-title span:last-child {
-    background: url(../assets/world.svg);
+    background: url(/assets/world.svg);
     display: inline-block;
     width: 25px;
     height: 24px;
