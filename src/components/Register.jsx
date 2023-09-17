@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
-import './registerStyles.css'
+import './RegisterStyles.css'
 const Register = () => {
     const [viewport, setViewport] = useState(true)
     const [passShow, setPassShow] = useState({ typePass: 'password', typeCPass: 'password' })
