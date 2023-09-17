@@ -1,5 +1,5 @@
 .card {
-    width: 50%;
+    width: 42%;
     margin: 2rem auto 0;
     border: 1px solid #E0E0E0;
     border-radius: 4px;
@@ -14,18 +14,20 @@
 
 .card-2-img {
     background: url('/assets/card-2.png') no-repeat;
+    background-size: contain;
     width: 100%;
     aspect-ratio: 3;
 }
 
 .card-3-img {
     background: url('/assets/card-3.png');
+    background-size: contain;
     width: 100%;
     aspect-ratio: 3;
 }
 
 .card-type {
-    margin: 2% 0 2% 0;
+    margin: 2.5% 0 2% 0;
     padding: 0 2.5%;
 }
 
@@ -40,7 +42,7 @@
 
 .card-header h3 {
     letter-spacing: 1px;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 
@@ -58,7 +60,7 @@
 .card .header-dots .card-dropdown {
     width: 5%;
     margin: 0 2% 0;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +78,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 3%;
-    margin: 2.2% 0;
+    margin: 2.3% 0;
 }
 
 .card-gen-info p {
@@ -84,7 +86,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .gen-info-calendar {
@@ -102,11 +105,11 @@
 
 .card-desc {
     padding: 0 2.8%;
-    margin: 2.2% 0;
+    margin: 2% 0;
 }
 
 .card-desc p {
-    font-size: 1.29rem;
+    font-size: 1.37rem;
     font-weight: 400;
     color: #5C5C5C;
 }
@@ -115,16 +118,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 2.5rem;
+    width: 94%;
+    height: 2.8rem;
     border: 1px solid #A9AEB8;
     border-radius: 10px;
     margin: 2% auto;
-    font-weight: 500;
+    font-weight: 800;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.card-btn:hover{
+    transform: translate(0,-3px);
 }
 
-.card-footer{
+.card-footer {
     /* width: 100%; */
+    margin: 6% 0 3% 0;
     padding: 0 3%;
     display: flex;
     flex-direction: row;
@@ -132,18 +142,52 @@
     align-items: center;
 }
 
-.card-footer .card-stats{
-    display: flex;
-    flex-direction: row;
-}
-.card-footer .card-profile{
+.card-footer .card-profile {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.card-footer .card-profile img{
-    width: 20px;
+.card-footer .card-profile img {
+    width: 3.2rem;
     aspect-ratio: 1;
+    margin: 0 0.6rem 0 0;
+}
+
+.card-footer .card-profile p {
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.card-footer .card-stats p svg {
+    margin: 0 7px -4px 0;
+    font-size: 1.2rem;
+}
+
+.card-footer .card-stats {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-footer .card-stats p {
+    color: #525252;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+
+.card-footer .card-stats span {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: #EDEEF0;
+    border-radius: 2px;
+    height: 2.5rem;
+  
 }

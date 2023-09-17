@@ -9,10 +9,12 @@ import "./CardStyles.css"
 import { useEffect, useState } from 'react'
 
 const Card = (props) => {
+    const [viewport, setViewport] = useState(false)
+
     const [dots, setDots] = useState(false)
     const [genInfoCount, setGenInfoCount] = useState(0)
 
-    let { img, type, header, desc, date, location, button, profileName, ProfileImg, company, views, buttonColor } = props
+    let { img, type, header, desc, date, location, button, profileName, profileImg, company, views, buttonColor } = props
     let count = 0
 
     useEffect(() => {
@@ -28,6 +30,15 @@ const Card = (props) => {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    const handleViewport = () => {
+        if ((window.innerWidth) <= 1000)
+            setViewport(true)
+        else
+            setViewport(false)
+    }
+
+    window.addEventListener('resize', handleViewport)
 
 
     const emojiType = (eventType) => {
@@ -91,10 +102,10 @@ const Card = (props) => {
             }
 
             <div className='card-footer'>
-                <div className='card-profile'> <img src={"/assets/" + ProfileImg + '.svg'} alt="" /> <p>{profileName}</p></div>
+                <div className='card-profile'> <img src={"/assets/" + profileImg + ".png"} alt="" /> <p>{profileName}</p></div>
                 <div className='card-stats'>
                     <p><AiOutlineEye />{views + ' views'}</p>
-                    <span><BsFillShareFill /></span>
+                    <span><BsFillShareFill />{viewport?'share':null}</span>
                 </div>
 
             </div>
