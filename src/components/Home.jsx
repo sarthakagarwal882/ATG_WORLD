@@ -9,7 +9,7 @@ const Home = () => {
         if ((window.innerWidth) <= 1000)
             setViewport('flex')
         else
-        setViewport('none')
+            setViewport('none')
     }
     const viewportFind = () => {
         if (window.innerWidth >= 500 && window.innerWidth <= 1000) {
