@@ -1,0 +1,191 @@
+.overlay-dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.register-wrapper{
+    background-color: transparent;
+    padding: 3rem 0;
+    position: absolute;
+    width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.register {
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.register-notification {
+    height: 4.3rem;
+    background-color: #EFFFF4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-notification {
+    color: #008A45;
+    font-weight: 500;
+}
+
+.register-main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.register-form {
+    padding: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form h2 {
+    font-size: 1.8rem;
+}
+
+.register-form form {
+    margin: 2rem auto 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.inp-dual {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.inp-dual input {
+    width: 50%;
+}
+
+.register-form form input {
+    height: 3.2rem;
+    background-color: #F7F8FA;
+    border: 1px solid #D9D9DB;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #000000;
+    padding: 0 3% 0;
+}
+
+.register-form form input::placeholder {
+    color: #8A8A8A;
+}
+
+.div-inp-pass {
+    width: 100%;
+    position: relative;
+}
+
+.div-inp-pass input {
+    width: 93.5%;
+}
+
+.div-inp-pass svg {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #8A8A8A;
+    cursor: pointer;
+}
+
+.register-form form input:focus {
+    outline: none;
+}
+
+.register-form form input::placeholder {
+    color: #8A8A8A;
+    font-weight: 500;
+}
+
+.register-form form button {
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 3.25rem;
+    background-color: #2F6CE5;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.17rem;
+    cursor: pointer;
+}
+
+.register-third-party {
+    width: 100%;
+}
+
+.register-third-party div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 2.7rem;
+    border: radius 2px;
+    border: 1px solid #D9D9DB;
+    margin: 10px 0;
+}
+
+.register-third-party div img {
+    margin: 0 5% 0 0;
+}
+
+.register-more {
+    padding: 6%;
+}
+
+.register-more div {
+    display: flex;
+    justify-content: right;
+}
+.register-more div a{
+    text-decoration: none;
+}
+
+.register-more div p {
+    cursor: pointer;
+    color: #3D3D3D;
+    font-weight: 400;
+    font-size: 1.05rem;
+}
+
+.register-more div p span {
+    color: #2F6CE5;
+    font-weight: 500;
+}
+
+.register-more img {
+    transform: scale(0.8);
+    margin: 2rem 0 0 0;
+}
+
+.terms-conditions {
+    margin: 0.4rem 0;
+    font-size: 0.8rem;
+}

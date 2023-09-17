@@ -17,7 +17,7 @@
     width: 30%;
 }
 
-.ul-div-wrapper{
+.ul-div-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -131,9 +131,17 @@
     cursor: pointer;
 }
 
+@media only screen and (max-width:1400px)
+{
+    .posts {
+        padding: 0 8%;
+        margin: 4rem 0 0 0;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     .posts {
-        padding: 0 5%;
+        padding: 0 12%;
         margin: 1.5rem 0 0 0;
     }
 
@@ -164,7 +172,7 @@
     .ul-div-wrapper button {
         background-color: #F1F3F5;
         border: none;
-        padding: 0 15px;
+        padding: 0 10px;
         height: 2.2rem;
         border-radius: 4px;
         font-weight: 500;
@@ -208,4 +216,63 @@
         margin: 0 3% !important;
     }
 
+}
+
+
+
+@media only screen and (max-width:800px) {
+    .posts {
+        padding: 0 12%;
+        margin: 1.5rem 0 0 0;
+    }
+    .ul-div-wrapper {
+        position: relative;
+        width: 40%;
+        display: flex;
+        flex-direction: column !important;
+    }
+    .ul-div-wrapper button {
+        background-color: #F1F3F5;
+        border: none;
+        padding: 0 10px;
+        height: 2.2rem;
+        border-radius: 4px;
+        font-weight: 500;
+        color: #212529;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width:600px) {
+    .posts {
+        padding: 0 8%;
+        margin: 1.5rem 0 0 0;
+    }
+    .ul-div-wrapper {
+        position: relative;
+        width: 40%;
+        display: flex;
+        flex-direction: column !important;
+    }
+
+
+    .ul-div-wrapper button {
+        background-color: #F1F3F5;
+        border: none;
+        padding: 0 10px;
+        height: 2.2rem;
+        border-radius: 4px;
+        font-weight: 500;
+        color: #212529;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+        cursor: pointer;
+    }
 }

@@ -9,7 +9,7 @@ import "./CardStyles.css"
 import { useEffect, useState } from 'react'
 
 const Card = (props) => {
-    const [viewport, setViewport] = useState(false)
+    const [viewport, setViewport] = useState(window.innerWidth <= 1000 ? true : false)
 
     const [dots, setDots] = useState(false)
     const [genInfoCount, setGenInfoCount] = useState(0)
@@ -79,7 +79,7 @@ const Card = (props) => {
 
             {
                 (genInfoCount > 0) ?
-                    <div className='card-gen-info' style={{ width: (genInfoCount) * 30 + '%' }}>
+                    <div className='card-gen-info' style={{ width: (genInfoCount) * (viewport ? 40 : 30) + '%' }}>
                         {(company) ? <p><TbBriefcase2 />{company}</p> : null}
                         {(date) ? <p><span className='gen-info-calendar'></span>{date}</p> : null}
                         {(location) ? <p><MdOutlineLocationOn />{location}</p> : null}
@@ -102,15 +102,28 @@ const Card = (props) => {
             }
 
             <div className='card-footer'>
-                <div className='card-profile'> <img src={"/assets/" + profileImg + ".png"} alt="" /> <p>{profileName}</p></div>
-                <div className='card-stats'>
-                    <p><AiOutlineEye />{views + ' views'}</p>
-                    <span><BsFillShareFill />{viewport?'share':null}</span>
+                <div className='card-profile'>
+                    <img src={"/assets/" + profileImg + ".png"} alt="" />
+                    {viewport ? <div>
+                        <p>{profileName}</p>
+                        <p><AiOutlineEye />{views} <p>&nbsp;views</p></p>
+                    </div> :
+                        <p>{profileName}</p>
+
+                    }
+
                 </div>
-
+                <div className='card-stats' style={viewport ? { justifyContent: 'center' } : null}>
+                {viewport ?
+                    null
+                    :
+                    <p><AiOutlineEye />{views} <p>&nbsp;views</p></p>
+                }
+                <span><BsFillShareFill />{viewport ? <p>Share</p> : null}</span>
             </div>
-
         </div>
+
+        </div >
     )
 }
 export default Card

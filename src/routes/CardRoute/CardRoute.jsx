@@ -1,8 +1,8 @@
 import Card from "../../components/Card"
-
+import './CardRouteStyles.css'
 const CardRoute = () => {
     return (
-        <div style={{margin:'0 0 5rem 0'}}>
+        <div className="card-r">
             <Card img='card-1' type='Article' header='What if famous brands had regular fonts? Meet RegulaBrands!' desc='I’ve worked in UX for the better part of a decade. From now on, I plan to rei…' views='1.4k' profileName='Sarthak Kamra' profileImg="sarthak" />
 
             <Card img='card-2' type='Education' header='Tax Benefits for Investment under National Pension Scheme launched by Government' desc='I’ve worked in UX for the better part of a decade. From now on, I plan to rei…' views='1.4k' profileName='Sarah West' profileImg="sarah" />
