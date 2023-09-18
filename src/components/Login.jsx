@@ -36,7 +36,7 @@ const Login = () => {
                 }
 
                 <div className='login'>
-                    {!viewport &
+                    {!viewport &&
                         <div className='login-notification' >
                             <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
                         </div>
