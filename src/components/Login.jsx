@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react'
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './LoginStyles.css'
+
 const Login = () => {
+    const navigateTo=useNavigate()
     const [viewport, setViewport] = useState(window.innerWidth <= 1000 ? true : false)
     const [passShow, setPassShow] = useState({ type: 'password' })
     const handleViewport = () => {
@@ -17,8 +19,8 @@ const Login = () => {
         setPassShow({ type: type })
     }
 
-    const hnadleFormSubmit = (e) => {
-        e.preventDefault()
+    const hnadleFormSubmit = () => {
+        navigateTo('/',{state:{name:'Siddharth Goyal'}})
     }
 
     window.addEventListener('resize', handleViewport)
@@ -48,7 +50,9 @@ const Login = () => {
                                 (viewport) ?
                                     <div className='sign-in-mobile-header'>
                                         <h2>Sign In</h2>
-                                        <img src="/assets/close-mobile.svg" alt="" />
+                                        <Link to={'/'}>
+                                            <img src="/assets/close-mobile.svg" alt="" className='login-close-mobile' />
+                                        </Link>
                                     </div>
                                     :
                                     <h2>Sign In</h2>
@@ -66,7 +70,7 @@ const Login = () => {
                                         <div className='sign-in-mobile-btn'>
                                             <button type='submit'>Sign In</button>
                                             <Link to={'/register'}>
-                                            <p>or, Create Account</p>
+                                                <p>or, Create Account</p>
                                             </Link>
                                         </div> :
                                         <button type='submit'>Sign In</button>

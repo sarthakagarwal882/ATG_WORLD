@@ -206,7 +206,9 @@
     color: #495057;
     text-decoration: underline solid black;
 }
-
+.login-close-mobile{
+    cursor:  pointer;
+}
 @media only screen and (max-width:800px) {
     .login-wrapper{
         background-color: transparent;

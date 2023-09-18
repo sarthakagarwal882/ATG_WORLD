@@ -307,14 +307,6 @@
         font-weight: 400;
         color: #5C5C5C;
     }
-    .card-gen-info p {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 0.9rem;
-    }
     .card-gen-info p svg {
         font-size: 1.2rem;
         margin: 0 3px 2px 0px;

@@ -1,7 +1,12 @@
 import { BiArrowBack } from 'react-icons/bi'
 import './HomeStyles.css';
 import { useState } from 'react';
-const Home = () => {
+const Home = (props) => {
+    // eslint-disable-next-line react/prop-types
+    let { state } = props
+    // eslint-disable-next-line no-unused-vars
+    const [userState, setUserState] = useState(state)
+
     const [viewport, setViewport] = useState('none')
     const [fontSize, setFontSize] = useState((window.innerWidth >= 1000) ? 2.2 : 1.1);
     const handleViewport = () => {

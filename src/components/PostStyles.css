@@ -124,7 +124,7 @@
     width: 62px;
     height: 62px;
     display: inline-block;
-    position: absolute;
+    position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 5;
@@ -252,27 +252,5 @@
     .posts {
         padding: 0 8%;
         margin: 1.5rem 0 0 0;
-    }
-    .ul-div-wrapper {
-        position: relative;
-        width: 40%;
-        display: flex;
-        flex-direction: column !important;
-    }
-
-
-    .ul-div-wrapper button {
-        background-color: #F1F3F5;
-        border: none;
-        padding: 0 10px;
-        height: 2.2rem;
-        border-radius: 4px;
-        font-weight: 500;
-        color: #212529;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 3;
-        cursor: pointer;
     }
 }

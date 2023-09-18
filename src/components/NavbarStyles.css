@@ -121,3 +121,19 @@
     transform: scale(1.5);
     margin:0 10px;
 }
+
+.profile-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.profile-info img{
+    margin: 0 10px 0 0;
+}
+.profile-info p{
+    font-weight: 500;
+}
+.profile-info svg{
+    font-size: 1.2rem;
+}

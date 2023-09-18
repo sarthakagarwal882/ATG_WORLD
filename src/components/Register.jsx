@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from 'react'
 import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './RegisterStyles.css'
+
 const Register = () => {
+    const navigateTo = useNavigate()
     const [viewport, setViewport] = useState(window.innerWidth <= 1000 ? true : false)
     const [passShow, setPassShow] = useState({ typePass: 'password', typeCPass: 'password' })
     const handleViewport = () => {
@@ -20,8 +22,8 @@ const Register = () => {
             setPassShow({ ...passShow, typeCPass: type })
     }
 
-    const hnadleFormSubmit = (e) => {
-        e.preventDefault()
+    const hnadleFormSubmit = () => {
+        navigateTo('/', { state: { name: 'Siddharth Goyal' } })
     }
 
     window.addEventListener('resize', handleViewport)
@@ -73,7 +75,7 @@ const Register = () => {
                                     (viewport) ? <div className='reg-submit-mobile'>
                                         <button type='submit'>Create Account</button>
                                         <Link to={'/login'}>
-                                        <p>or, Sign In</p>
+                                            <p>or, Sign In</p>
                                         </Link>
                                     </div>
                                         :
