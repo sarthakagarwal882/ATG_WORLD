@@ -243,6 +243,6 @@
         transition: 0.3s ease-in-out;
     }
     .translate-back{
-        transform: translate(-50%,-25%);
+        transform: translate(-50%,-22%);
     }
 }
