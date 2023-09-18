@@ -139,6 +139,7 @@
 
 .register-third-party {
     width: 100%;
+    cursor: pointer;
 }
 
 .register-third-party div {
@@ -188,4 +189,60 @@
 .terms-conditions {
     margin: 0.4rem 0;
     font-size: 0.8rem;
+}
+
+.reg-form-heading-mobile
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.reg-form-heading-mobile a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.terms-mobile{
+    width: 70%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.reg-submit-mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.reg-submit-mobile button{
+    width: 50% !important;
+}
+.reg-submit-mobile p{
+    color: #495057;
+    text-decoration: underline solid #000000;
+}
+@media only screen and (max-width:800px) {
+    .register {
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 8px;
+    }
+    .register-wrapper{
+        background-color: transparent;
+        padding: 3rem 0;
+        position: absolute;
+        width: 100%;
+        /* top: 50%; */
+        /* left: 50%; */
+        transform: translate(-50%, -2000%);
+        bottom: 0;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+    }
+    .translate-back{
+        transform: translate(-50%,-25%);
+    }
 }

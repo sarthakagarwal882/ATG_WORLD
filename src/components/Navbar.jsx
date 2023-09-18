@@ -45,7 +45,11 @@ const Navbar = () => {
             :
             <div className="navbar-mobile">
                 <div>
-                    <img src="/assets/square.svg" alt="" /><img src="/assets/circle.svg" alt="" /><img src="/assets/triangle.svg" alt="" />
+                    <img src="/assets/square.svg" alt="" />
+                    <img src="/assets/circle.svg" alt="" />
+                    <Link to={'/register'}>
+                    <img src="/assets/triangle.svg" alt="" />
+                    </Link>
                 </div>
             </div>
     )

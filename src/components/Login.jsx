@@ -4,13 +4,13 @@ import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import './LoginStyles.css'
 const Login = () => {
-    const [viewport, setViewport] = useState(true)
+    const [viewport, setViewport] = useState(window.innerWidth <= 1000 ? true : false)
     const [passShow, setPassShow] = useState({ type: 'password' })
     const handleViewport = () => {
         if ((window.innerWidth) <= 1000)
-            setViewport(false)
-        else
             setViewport(true)
+        else
+            setViewport(false)
     }
 
     const handlePassShow = (type) => {
@@ -25,25 +25,34 @@ const Login = () => {
 
     return (
         <div className='overlay-dark'>
-            <div className='login-wrapper'>
-                <Link to={'/'}>
-                    <img src="/assets/close.svg" className='login-close' alt="" />
-                </Link>
+            <div className='login-wrapper translate-back'>
+                {
+                    (!viewport) &&
+                    <Link to={'/'}>
+                        <img src="/assets/close.svg" className='login-close' alt="" />
+                    </Link>
+                }
 
                 <div className='login'>
-                    {viewport ?
+                    {!viewport &
                         <div className='login-notification' >
                             <p>Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
                         </div>
-                        :
-                        null
                     }
 
                     <div className='login-main'>
 
                         <div className='login-form'>
 
-                            <h2>Sign In</h2>
+                            {
+                                (viewport) ?
+                                    <div className='sign-in-mobile-header'>
+                                        <h2>Sign In</h2>
+                                        <img src="/assets/close-mobile.svg" alt="" />
+                                    </div>
+                                    :
+                                    <h2>Sign In</h2>
+                            }
 
                             <form onSubmit={hnadleFormSubmit}>
 
@@ -52,7 +61,16 @@ const Login = () => {
                                     <input placeholder='Password' type={passShow.type} />
                                     {(passShow.type === 'password') ? <AiOutlineEye onClick={() => { handlePassShow('text') }} /> : <AiOutlineEyeInvisible onClick={() => { handlePassShow('password') }} />}
                                 </div>
-                                <button type='submit'>Create Account</button>
+                                {
+                                    (viewport) ?
+                                        <div className='sign-in-mobile-btn'>
+                                            <button type='submit'>Sign In</button>
+                                            <Link to={'/register'}>
+                                            <p>or, Create Account</p>
+                                            </Link>
+                                        </div> :
+                                        <button type='submit'>Sign In</button>
+                                }
                             </form>
 
                             <div className='login-third-party'>
@@ -63,17 +81,19 @@ const Login = () => {
 
                         </div>
 
-                        <div className='login-more'>
+                        {(!viewport) &&
 
-                            <div>
-                                <Link to={'/register'}>
-                                <p>Don’t have an account yet? <span>Create new for free!</span></p>
-                                </Link>
+                            <div className='login-more'>
+                                <div>
+                                    <Link to={'/register'}>
+                                        <p>Don’t have an account yet? <span>Create new for free!</span></p>
+                                    </Link>
+                                </div>
+
+                                <img src="/assets/authentication.png" alt="" />
+
                             </div>
-
-                            <img src="/assets/authentication.png" alt="" />
-
-                        </div>
+                        }
 
                     </div>
                 </div >

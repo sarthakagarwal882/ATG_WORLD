@@ -79,7 +79,7 @@ const Card = (props) => {
 
             {
                 (genInfoCount > 0) ?
-                    <div className='card-gen-info' style={{ width: (genInfoCount) * (viewport ? 40 : 30) + '%' }}>
+                    <div className='card-gen-info' style={{ width: (genInfoCount) * (genInfoCount === 2 ? 40 : (viewport ? 40 : 30)) + '%' }}>
                         {(company) ? <p><TbBriefcase2 />{company}</p> : null}
                         {(date) ? <p><span className='gen-info-calendar'></span>{date}</p> : null}
                         {(location) ? <p><MdOutlineLocationOn />{location}</p> : null}
@@ -114,14 +114,14 @@ const Card = (props) => {
 
                 </div>
                 <div className='card-stats' style={viewport ? { justifyContent: 'center' } : null}>
-                {viewport ?
-                    null
-                    :
-                    <p><AiOutlineEye />{views} <p>&nbsp;views</p></p>
-                }
-                <span><BsFillShareFill />{viewport ? <p>Share</p> : null}</span>
+                    {viewport ?
+                        null
+                        :
+                        <p><AiOutlineEye />{views} <p>&nbsp;views</p></p>
+                    }
+                    <span><BsFillShareFill />{viewport ? <p>Share</p> : null}</span>
+                </div>
             </div>
-        </div>
 
         </div >
     )
