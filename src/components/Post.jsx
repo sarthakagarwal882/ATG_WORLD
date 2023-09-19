@@ -1,6 +1,7 @@
 import './PostStyles.css'
 import { useState } from "react"
 import { IoMdArrowDropdown } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 
 const Post = () => {
     const [liClicked, setLiClicked] = useState(0)
@@ -78,7 +79,9 @@ const Post = () => {
             </div>
             {(viewport) ?
                 <hr /> :
+                <Link to={'/login'}>
                 <span className='write-post-mob' />
+                </Link>
             }
 
         </div >
