@@ -1,5 +1,6 @@
 .home {
     width: 100%;
+    z-index: 10;
 }
 
 .home .group-intro {
