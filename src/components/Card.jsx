@@ -74,6 +74,13 @@ const Card = (props) => {
                 }
                 <div onClick={dotsDropdown} className={(dots) ? 'dots-clicked card-dropdown' : 'card-dropdown'}>
                     <BsThreeDots />
+                    <div className='dots-dropdown' style={{ display: dots ? 'initial' : 'none' }}>
+                        <ul>
+                            <li><p>Edit</p></li>
+                            <li><p>Report</p></li>
+                            <li><p>Option 3</p></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

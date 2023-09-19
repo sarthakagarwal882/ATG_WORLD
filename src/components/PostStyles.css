@@ -60,7 +60,6 @@
     left: 0;
 }
 
-
 .posts-child div:last-child {
     display: flex;
     flex-direction: row;
@@ -234,7 +233,7 @@
     .ul-div-wrapper button {
         background-color: #F1F3F5;
         border: none;
-        padding: 0 10px;
+        padding: 0 8px;
         height: 2.2rem;
         border-radius: 4px;
         font-weight: 500;
