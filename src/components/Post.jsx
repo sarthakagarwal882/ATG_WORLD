@@ -53,7 +53,7 @@ const Post = () => {
                 <div className='ul-div-wrapper'>
                     {
                         viewport ? null :
-                            <button className="dropbtn" onClick={toggleDropdown}>Filter: {liFilter}<IoMdArrowDropdown /></button>
+                            <button className="dropbtn" onClick={toggleDropdown}>Filter: {liFilter}<IoMdArrowDropdown className={isOpen&&'rotate-180'} /></button>
                     }
                     <ul className={(isOpen && !viewport) ? "toggle" : null}>
                         {listItems.map((item, index) => (
